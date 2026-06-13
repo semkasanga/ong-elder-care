@@ -1,0 +1,586 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ─────────────────────────────────────────────── */
+@theme {
+  --color-primary-50: #eef7f8;
+  --color-primary-100: #d5ecef;
+  --color-primary-600: #0d6e7a;
+  --color-primary-700: #0a5560;
+  --color-primary-800: #084048;
+
+  --color-secondary-500: #c4653a;
+  --color-secondary-600: #a8522e;
+
+  --color-accent-400: #d4a843;
+
+  --color-success: #2d8b4e;
+  --color-warning: #d97706;
+  --color-error: #dc2626;
+
+  --color-neutral-50: #fafaf9;
+  --color-neutral-100: #f5f5f4;
+  --color-neutral-200: #e7e5e4;
+  --color-neutral-300: #d6d3d1;
+  --color-neutral-400: #a8a29e;
+  --color-neutral-500: #78716c;
+  --color-neutral-600: #57534e;
+  --color-neutral-700: #44403c;
+  --color-neutral-800: #292524;
+  --color-neutral-900: #1c1917;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", "Inter", ui-sans-serif, sans-serif;
+
+  --radius-card: 1rem;
+  --radius-button: 0.75rem;
+  --radius-image: 1.25rem;
+  --radius-feature: 1.5rem;
+
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 18px 40px rgba(0, 0, 0, 0.1);
+  --shadow-header: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Base ──────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-neutral-50 font-sans text-neutral-600 antialiased;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  @media (min-width: 1024px) {
+    body {
+      font-size: 1.125rem;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-neutral-800;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-600;
+  }
+
+  img {
+    @apply max-w-full;
+  }
+}
+
+/* ─── Layout & Spacing ──────────────────────────────────────────── */
+@layer components {
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100]
+      focus:rounded-button focus:bg-primary-600 focus:px-4 focus:py-2 focus:text-white;
+  }
+
+  .container-site {
+    @apply mx-auto w-full max-w-[1280px] px-4 md:px-6 xl:px-8;
+  }
+
+  .section {
+    @apply py-[4.5rem] md:py-24 xl:py-[7.5rem];
+  }
+
+  .section-alt {
+    @apply bg-neutral-100;
+  }
+
+  .section-tint {
+    @apply bg-primary-50;
+  }
+
+  /* ─── Typography ─────────────────────────────────────────────── */
+  .eyebrow {
+    @apply mb-3 inline-block text-xs font-semibold uppercase tracking-[0.12em] text-primary-600 md:text-sm;
+  }
+
+  .hero-title {
+    @apply font-display text-[2.25rem] font-bold leading-[1.1] text-neutral-900 md:text-5xl xl:text-[4rem];
+  }
+
+  .section-title {
+    @apply font-display text-[2rem] font-bold leading-[1.15] text-neutral-800 md:text-4xl xl:text-5xl;
+  }
+
+  .section-desc {
+    @apply mt-4 max-w-[42rem] text-base leading-relaxed text-neutral-600 md:text-lg;
+  }
+
+  .card-title {
+    @apply text-xl font-semibold leading-snug text-neutral-800 md:text-2xl;
+  }
+
+  .prose-body {
+    @apply text-base leading-relaxed text-neutral-600 md:text-lg;
+  }
+
+  .section-header {
+    @apply mb-10 md:mb-14 xl:mb-16;
+  }
+
+  .section-header-center {
+    @apply mb-10 mx-auto max-w-3xl text-center md:mb-14 xl:mb-16;
+  }
+
+  /* ─── Buttons ────────────────────────────────────────────────── */
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-button px-6
+      text-sm font-semibold transition-[transform,box-shadow,background-color,border-color,color]
+      duration-300 md:min-h-[3.25rem] md:px-8 md:text-base;
+  }
+
+  .btn-primary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-button px-6
+      text-sm font-semibold transition-[transform,box-shadow,background-color,border-color,color]
+      duration-300 md:min-h-[3.25rem] md:px-8 md:text-base
+      bg-primary-600 text-white hover:-translate-y-0.5 hover:bg-primary-700 hover:shadow-card-hover;
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-button px-6
+      text-sm font-semibold transition-[transform,box-shadow,background-color,border-color,color]
+      duration-300 md:min-h-[3.25rem] md:px-8 md:text-base
+      border-2 border-primary-600 bg-transparent text-primary-700
+      hover:-translate-y-0.5 hover:bg-primary-50 hover:shadow-card;
+  }
+
+  .btn-warm {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-button px-6
+      text-sm font-semibold transition-[transform,box-shadow,background-color,border-color,color]
+      duration-300 md:min-h-[3.25rem] md:px-8 md:text-base
+      bg-secondary-500 text-white hover:-translate-y-0.5 hover:bg-secondary-600 hover:shadow-card-hover;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-button px-6
+      text-sm font-semibold transition-[transform,box-shadow,background-color,border-color,color]
+      duration-300 md:min-h-[3.25rem] md:px-8 md:text-base
+      border-2 border-white/80 bg-transparent text-white
+      hover:-translate-y-0.5 hover:border-white hover:bg-white/10;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-1 text-sm font-semibold text-primary-600
+      transition-colors duration-300 hover:text-primary-700 md:text-base;
+  }
+
+  .btn-ghost::after {
+    content: "→";
+    @apply transition-transform duration-300;
+  }
+
+  .btn-ghost:hover::after {
+    @apply translate-x-1;
+  }
+
+  /* ─── Header & Navigation ────────────────────────────────────── */
+  .site-header {
+    @apply sticky top-0 z-50 border-b border-neutral-200/80 bg-white/95 shadow-header backdrop-blur-sm;
+  }
+
+  .site-logo {
+    @apply font-display text-sm font-bold leading-tight text-primary-700 md:text-base xl:text-lg;
+  }
+
+  .site-logo span {
+    @apply block text-[0.65rem] font-semibold uppercase tracking-wider text-neutral-500 md:text-xs;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-neutral-600 transition-colors duration-300 hover:text-primary-600;
+  }
+
+  .nav-link-cta {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-button px-5 py-2.5
+      text-sm font-semibold bg-primary-600 text-white
+      transition-[transform,box-shadow,background-color] duration-300
+      hover:-translate-y-0.5 hover:bg-primary-700 hover:shadow-card-hover;
+  }
+
+  .nav-toggle {
+    @apply relative flex h-11 w-11 items-center justify-center rounded-button border border-neutral-200
+      bg-white text-neutral-700 lg:hidden;
+  }
+
+  .nav-toggle-icon,
+  .nav-toggle-icon::before,
+  .nav-toggle-icon::after {
+    @apply block h-0.5 w-5 rounded-full bg-neutral-700 transition-all duration-300;
+  }
+
+  .nav-toggle-icon {
+    @apply relative;
+  }
+
+  .nav-toggle-icon::before,
+  .nav-toggle-icon::after {
+    content: "";
+    @apply absolute left-0;
+  }
+
+  .nav-toggle-icon::before {
+    @apply -top-1.5;
+  }
+
+  .nav-toggle-icon::after {
+    @apply top-1.5;
+  }
+
+  #nav-toggle:checked ~ .site-header .nav-toggle-icon {
+    @apply bg-transparent;
+  }
+
+  #nav-toggle:checked ~ .site-header .nav-toggle-icon::before {
+    @apply top-0 rotate-45;
+  }
+
+  #nav-toggle:checked ~ .site-header .nav-toggle-icon::after {
+    @apply top-0 -rotate-45;
+  }
+
+  .mobile-nav-panel {
+    @apply hidden border-t border-neutral-200 bg-white lg:!flex lg:border-0 lg:bg-transparent;
+  }
+
+  #nav-toggle:checked ~ .site-header .mobile-nav-panel {
+    @apply block;
+  }
+
+  /* ─── Cards ──────────────────────────────────────────────────── */
+  .card {
+    @apply rounded-card bg-white p-5 shadow-card md:p-6;
+  }
+
+  .card-icon {
+    @apply mb-4 flex h-12 w-12 items-center justify-center rounded-button bg-primary-50 text-primary-600;
+  }
+
+  .card-icon svg {
+    @apply h-6 w-6;
+  }
+
+  .value-card {
+    @apply h-full rounded-card bg-white p-5 shadow-card transition-[box-shadow,transform]
+      duration-300 hover:-translate-y-1 hover:shadow-card-hover md:p-6;
+  }
+
+  .impact-card {
+    @apply rounded-card bg-white p-5 text-center shadow-card md:p-6;
+  }
+
+  .impact-number {
+    @apply font-display text-4xl font-bold text-primary-600 md:text-5xl;
+  }
+
+  .impact-label {
+    @apply mt-2 text-sm font-medium text-neutral-600 md:text-base;
+  }
+
+  .program-card {
+    @apply flex h-full flex-col overflow-hidden rounded-card bg-white shadow-card
+      transition-[box-shadow,transform] duration-300 hover:-translate-y-1 hover:shadow-card-hover;
+  }
+
+  .program-card-image {
+    @apply aspect-[4/3] overflow-hidden;
+  }
+
+  .program-card-image img {
+    @apply h-full w-full object-cover transition-transform duration-500;
+  }
+
+  .program-card:hover .program-card-image img {
+    @apply scale-105;
+  }
+
+  .program-card-body {
+    @apply flex flex-1 flex-col p-5 md:p-6;
+  }
+
+  .program-card-compact {
+    @apply flex h-full flex-col rounded-card bg-white p-5 shadow-card
+      transition-[box-shadow,transform] duration-300 hover:-translate-y-1 hover:shadow-card-hover md:p-6;
+  }
+
+  .action-card {
+    @apply flex h-full flex-col items-start rounded-card bg-white p-5 text-left shadow-card
+      transition-[box-shadow,transform] duration-300 hover:-translate-y-1 hover:shadow-card-hover md:p-6;
+  }
+
+  .action-card-icon {
+    @apply mb-4 flex h-14 w-14 items-center justify-center rounded-feature bg-primary-50 text-primary-600;
+  }
+
+  /* ─── Hero ───────────────────────────────────────────────────── */
+  .hero-section {
+    @apply relative overflow-hidden bg-neutral-50 pt-8 md:pt-12;
+    min-height: 85vh;
+  }
+
+  .hero-grid {
+    @apply grid min-h-[calc(85vh-4rem)] items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12;
+  }
+
+  .hero-image-wrap {
+    @apply relative overflow-hidden rounded-feature shadow-card;
+  }
+
+  .hero-image-wrap img {
+    @apply aspect-[4/5] w-full object-cover lg:aspect-[3/4];
+  }
+
+  /* ─── About ──────────────────────────────────────────────────── */
+  .about-grid {
+    @apply grid items-center gap-10 lg:grid-cols-2 lg:gap-16;
+  }
+
+  .about-image {
+    @apply overflow-hidden rounded-feature shadow-card;
+  }
+
+  .about-image img {
+    @apply aspect-[4/3] w-full object-cover;
+  }
+
+  .about-list {
+    @apply mt-6 grid gap-3 sm:grid-cols-2;
+  }
+
+  .about-list-item {
+    @apply flex items-start gap-2 text-sm text-neutral-600 md:text-base;
+  }
+
+  .about-list-item::before {
+    content: "";
+    @apply mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary-500;
+  }
+
+  .about-highlight {
+    @apply mt-6 rounded-card border-l-4 border-accent-400 bg-primary-50 p-4 text-sm font-medium
+      text-neutral-700 md:p-5 md:text-base;
+  }
+
+  /* ─── Mission / Vision ───────────────────────────────────────── */
+  .mvv-grid {
+    @apply grid gap-6 md:grid-cols-2 lg:grid-cols-3;
+  }
+
+  .values-grid {
+    @apply mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3;
+  }
+
+  /* ─── Impact ─────────────────────────────────────────────────── */
+  .impact-grid {
+    @apply grid gap-6 sm:grid-cols-2 xl:grid-cols-4;
+  }
+
+  .impact-secondary {
+    @apply mt-8 grid gap-4 md:grid-cols-3;
+  }
+
+  .impact-secondary-item {
+    @apply rounded-card border border-neutral-200 bg-white p-4 text-center md:p-5;
+  }
+
+  /* ─── Programs ───────────────────────────────────────────────── */
+  .programs-featured {
+    @apply grid gap-8 md:grid-cols-2;
+  }
+
+  .programs-compact {
+    @apply mt-8 grid gap-6 md:grid-cols-3;
+  }
+
+  /* ─── Gallery ────────────────────────────────────────────────── */
+  .gallery-grid {
+    @apply grid gap-4 sm:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .gallery-item {
+    @apply relative overflow-hidden rounded-image;
+  }
+
+  .gallery-item img {
+    @apply aspect-square w-full object-cover transition-transform duration-500;
+  }
+
+  .gallery-item:hover img {
+    @apply scale-105;
+  }
+
+  .gallery-overlay {
+    @apply absolute inset-0 flex items-end bg-gradient-to-t from-neutral-900/70 via-neutral-900/20
+      to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100;
+  }
+
+  .gallery-overlay span {
+    @apply text-sm font-medium text-white;
+  }
+
+  /* ─── Testimonials ───────────────────────────────────────────── */
+  .testimonials-grid {
+    @apply grid gap-6 md:grid-cols-3;
+  }
+
+  .testimonial-card {
+    @apply flex h-full flex-col rounded-card bg-white p-5 shadow-card md:p-6;
+  }
+
+  .testimonial-quote {
+    @apply flex-1 text-base italic leading-relaxed text-neutral-600;
+  }
+
+  .testimonial-author {
+    @apply mt-6 border-t border-neutral-200 pt-4;
+  }
+
+  .testimonial-name {
+    @apply font-semibold text-neutral-800;
+  }
+
+  .testimonial-role {
+    @apply text-sm text-neutral-500;
+  }
+
+  .placeholder-badge {
+    @apply mb-3 inline-block rounded-full bg-warning/10 px-3 py-1 text-xs font-medium text-warning;
+  }
+
+  /* ─── Partners ───────────────────────────────────────────────── */
+  .partners-grid {
+    @apply grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6;
+  }
+
+  .partner-slot {
+    @apply flex aspect-[3/2] items-center justify-center rounded-card border-2 border-dashed
+      border-neutral-200 bg-white p-4 text-center text-xs font-medium text-neutral-400
+      transition-[border-color,background-color] duration-300 hover:border-primary-100 hover:bg-primary-50;
+  }
+
+  /* ─── Support CTA ────────────────────────────────────────────── */
+  .support-section {
+    @apply relative overflow-hidden;
+  }
+
+  .support-bg {
+    @apply absolute inset-0;
+  }
+
+  .support-bg img {
+    @apply h-full w-full object-cover;
+  }
+
+  .support-overlay {
+    @apply absolute inset-0 bg-neutral-900/75;
+  }
+
+  .support-content {
+    @apply relative z-10 text-white;
+  }
+
+  .support-title {
+    @apply font-display text-[2rem] font-bold leading-tight text-white md:text-4xl xl:text-5xl;
+  }
+
+  .support-desc {
+    @apply mt-4 max-w-2xl text-base leading-relaxed text-neutral-200 md:text-lg;
+  }
+
+  .support-actions {
+    @apply mt-10 grid gap-6 md:grid-cols-3;
+  }
+
+  .support-action-card {
+    @apply rounded-card border border-white/20 bg-white/10 p-6 backdrop-blur-sm
+      transition-[background-color,transform] duration-300 hover:-translate-y-1 hover:bg-white/15;
+  }
+
+  /* ─── Contact ────────────────────────────────────────────────── */
+  .contact-grid {
+    @apply grid gap-10 lg:grid-cols-2 lg:gap-16;
+  }
+
+  .form-group {
+    @apply mb-5;
+  }
+
+  .form-label {
+    @apply mb-2 block text-sm font-medium text-neutral-700;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    @apply w-full rounded-button border border-neutral-200 bg-white px-4 text-neutral-800
+      transition-[border-color,box-shadow] duration-300 placeholder:text-neutral-400
+      focus:border-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600/20;
+  }
+
+  .form-input,
+  .form-select {
+    @apply h-[3.25rem];
+  }
+
+  .form-textarea {
+    @apply min-h-[9rem] resize-y py-3;
+  }
+
+  .contact-info-list {
+    @apply space-y-5;
+  }
+
+  .contact-info-item {
+    @apply flex gap-4;
+  }
+
+  .contact-info-icon {
+    @apply flex h-11 w-11 shrink-0 items-center justify-center rounded-button bg-primary-50 text-primary-600;
+  }
+
+  .contact-info-label {
+    @apply text-sm font-medium text-neutral-500;
+  }
+
+  .contact-info-value {
+    @apply text-base font-medium text-neutral-800;
+  }
+
+  .contact-info-value a {
+    @apply text-primary-600 transition-colors duration-300 hover:text-primary-700;
+  }
+
+  .map-placeholder {
+    @apply mt-8 flex aspect-[16/9] items-center justify-center rounded-card border-2
+      border-dashed border-neutral-200 bg-neutral-100 text-sm text-neutral-400;
+  }
+
+  /* ─── Footer ─────────────────────────────────────────────────── */
+  .site-footer {
+    @apply bg-neutral-900 text-neutral-300;
+  }
+
+  .footer-grid {
+    @apply grid gap-10 sm:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .footer-title {
+    @apply mb-4 font-display text-sm font-bold uppercase tracking-wider text-white;
+  }
+
+  .footer-link {
+    @apply text-sm text-neutral-400 transition-colors duration-300 hover:text-white;
+  }
+
+  .footer-bottom {
+    @apply mt-12 border-t border-neutral-800 pt-8 text-center text-sm text-neutral-500;
+  }
+}
