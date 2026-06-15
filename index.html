@@ -4,15 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="AGED-CARE FOUNDATION is a Zambian non-profit improving the lives of vulnerable older persons through care services, health programmes, advocacy, and community support. Support our mission today.">
-  <meta name="keywords" content="elderly care Zambia, aged care foundation, older persons welfare, elder support Lusaka, NGO Zambia">
+  <meta name="theme-color" content="#0d6e7a">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="AGED-CARE FOUNDATION">
   <meta property="og:title" content="AGED-CARE FOUNDATION — Restoring Dignity, Enhancing Wellbeing">
   <meta property="og:description" content="Promoting dignity, health, protection and social inclusion for older persons across Zambia.">
   <meta property="og:image" content="images/elder-supplies-smile.jpg">
+  <meta property="og:image:alt" content="An elderly man smiling with donated food supplies from AGED-CARE FOUNDATION volunteers.">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AGED-CARE FOUNDATION — Restoring Dignity for Older Persons in Zambia">
+  <meta name="twitter:description" content="Promoting dignity, health, protection and social inclusion for older persons across Zambia.">
+  <meta name="twitter:image" content="images/elder-supplies-smile.jpg">
 
   <title>AGED-CARE FOUNDATION — Restoring Dignity for Older Persons in Zambia</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "AGED-CARE FOUNDATION",
+    "description": "A Zambian non-profit promoting dignity, health, protection and social inclusion for older persons.",
+    "url": "./",
+    "logo": "images/logo.jpg",
+    "email": "agedcarefoundation22@gmail.com",
+    "telephone": "+260975821846",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2427, 10 Miles, Mungule Road",
+      "addressLocality": "Chibombo",
+      "addressRegion": "Lusaka Province",
+      "addressCountry": "ZM"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Zambia"
+    },
+    "sameAs": ["https://facebook.com"]
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,38 +59,117 @@
 
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- Mobile nav toggle (CSS-only, no JS) -->
-  <input type="checkbox" id="nav-toggle" class="sr-only" aria-hidden="true">
-
   <!-- ═══════════════════ HEADER ═══════════════════ -->
-  <header class="site-header" role="banner">
-    <div class="container-site">
-      <div class="flex h-16 items-center justify-between md:h-[4.5rem]">
+  <header class="site-header" data-header role="banner">
+    <div class="header-shell container-site">
 
-        <a href="#hero" class="site-logo" aria-label="AGED-CARE FOUNDATION — Home">
-          AGED-CARE FOUNDATION
-          <span>Restoring Dignity</span>
+      <div class="header-bar">
+        <a href="#hero" class="site-logo" data-scroll-link aria-label="AGED-CARE FOUNDATION — Home">
+          <img
+            src="images/logo.jpg"
+            alt=""
+            class="site-logo-image"
+            width="264"
+            height="231"
+            decoding="async"
+            fetchpriority="high"
+          >
+          <span class="site-logo-copy">
+            <span class="site-logo-name">AGED-CARE FOUNDATION</span>
+            <span class="site-logo-tagline">Restoring Dignity</span>
+          </span>
         </a>
 
-        <label for="nav-toggle" class="nav-toggle lg:hidden" aria-label="Toggle navigation menu">
-          <span class="nav-toggle-icon" aria-hidden="true"></span>
-        </label>
-
-        <nav class="mobile-nav-panel lg:flex lg:flex-1 lg:items-center lg:justify-end lg:gap-8" aria-label="Main navigation">
-          <ul class="flex flex-col gap-1 py-4 lg:flex-row lg:items-center lg:gap-6 lg:py-0">
-            <li><a href="#about" class="nav-link block px-4 py-3 lg:px-0 lg:py-0">About</a></li>
-            <li><a href="#impact" class="nav-link block px-4 py-3 lg:px-0 lg:py-0">Our Impact</a></li>
-            <li><a href="#programs" class="nav-link block px-4 py-3 lg:px-0 lg:py-0">Programmes</a></li>
-            <li><a href="#gallery" class="nav-link block px-4 py-3 lg:px-0 lg:py-0">Gallery</a></li>
-            <li><a href="#partners" class="nav-link block px-4 py-3 lg:px-0 lg:py-0">Partners</a></li>
-            <li><a href="#contact" class="nav-link block px-4 py-3 lg:px-0 lg:py-0">Contact</a></li>
-            <li class="px-4 pt-2 lg:px-0 lg:pt-0">
-              <a href="#support" class="nav-link-cta w-full lg:w-auto">Support Us</a>
-            </li>
-          </ul>
-        </nav>
-
+        <button
+          type="button"
+          class="nav-toggle"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="main-navigation"
+          aria-label="Open navigation menu"
+        >
+          <span class="nav-toggle-inner" aria-hidden="true">
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+          </span>
+        </button>
       </div>
+
+      <nav
+        id="main-navigation"
+        class="site-nav"
+        data-nav-menu
+        aria-label="Main navigation"
+      >
+        <button
+          type="button"
+          class="site-nav-backdrop"
+          data-nav-backdrop
+          tabindex="-1"
+          aria-label="Close navigation menu"
+        ></button>
+
+        <div class="site-nav-panel" data-nav-panel>
+          <div class="site-nav-drawer-header">
+            <div class="site-nav-drawer-brand">
+              <img
+                src="images/logo.jpg"
+                alt=""
+                class="site-nav-drawer-logo"
+                width="264"
+                height="231"
+                decoding="async"
+              >
+              <div>
+                <p id="nav-dialog-title" class="site-nav-drawer-name">AGED-CARE FOUNDATION</p>
+                <p class="site-nav-drawer-trust">Registered NGO · Zambia</p>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="site-nav-close"
+              data-nav-close
+              aria-label="Close navigation menu"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+              </svg>
+            </button>
+          </div>
+
+          <ul class="site-nav-list" role="list">
+            <li><a href="#about" class="site-nav-link" data-nav-link><span>About</span></a></li>
+            <li><a href="#impact" class="site-nav-link" data-nav-link><span>Our Impact</span></a></li>
+            <li><a href="#programs" class="site-nav-link" data-nav-link><span>Programmes</span></a></li>
+            <li><a href="#gallery" class="site-nav-link" data-nav-link><span>Gallery</span></a></li>
+            <li><a href="#testimonials" class="site-nav-link" data-nav-link><span class="site-nav-label site-nav-label--full">Our Commitment</span><span class="site-nav-label site-nav-label--short">Commitment</span></a></li>
+            <li><a href="#partners" class="site-nav-link" data-nav-link><span>Partners</span></a></li>
+            <li class="hidden lg:block"><a href="#contact" class="site-nav-link" data-nav-link><span>Contact</span></a></li>
+          </ul>
+
+          <div class="site-nav-footer">
+            <a href="#support" class="site-nav-cta" data-nav-link>
+              <span>Support Our Mission</span>
+              <svg class="site-nav-cta-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <div class="site-nav-contact-group">
+              <a href="tel:+260975821846" class="site-nav-contact site-nav-contact--phone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <span>+260 975 821 846</span>
+              </a>
+              <a href="#contact" class="site-nav-contact site-nav-contact--message" data-nav-link>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                <span>Send a message</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
     </div>
   </header>
 
@@ -67,29 +180,44 @@
       <div class="container-site">
         <div class="hero-grid">
 
-          <div class="hero-content">
-            <p class="eyebrow">Promoting Dignity for Older Persons in Zambia</p>
+          <div class="hero-content" data-reveal>
+            <p class="eyebrow">Strategic Theme 2026–2030</p>
             <h1 id="hero-heading" class="hero-title">
-              Restoring Dignity, Enhancing Wellbeing, Transforming Lives.
+              Promoting Dignity, Health, Protection and Social Inclusion for Older Persons in Zambia
             </h1>
             <p class="prose-body mt-6 max-w-xl">
-              AGED-CARE FOUNDATION is a registered Zambian non-profit dedicated to the welfare,
-              health, and social inclusion of vulnerable older persons. We work alongside communities
-              and partners to ensure no elder is left behind.
+              AGED-CARE FOUNDATION is a registered non-profit and charitable organization dedicated
+              to promoting the welfare, dignity, health, protection, and social inclusion of older
+              persons in Zambia — ensuring that no elderly person is left behind.
             </p>
             <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <a href="#support" class="btn-primary">Support Our Mission</a>
-              <a href="#programs" class="btn-secondary">Explore Our Programmes</a>
+              <a href="#support" class="btn-primary" data-scroll-link>Support Our Mission</a>
+              <a href="#programs" class="btn-secondary" data-scroll-link>Explore Our Programmes</a>
+            </div>
+            <div class="hero-stats" aria-label="Key strategic focus areas">
+              <div>
+                <p class="hero-stat-value">7</p>
+                <p class="hero-stat-label">Strategic pillars</p>
+              </div>
+              <div>
+                <p class="hero-stat-value">10</p>
+                <p class="hero-stat-label">Provinces targeted</p>
+              </div>
+              <div>
+                <p class="hero-stat-value">2030</p>
+                <p class="hero-stat-label">Strategic horizon</p>
+              </div>
             </div>
           </div>
 
-          <div class="hero-image-wrap">
+          <div class="hero-image-wrap" data-reveal data-reveal-delay="1">
             <img
               src="images/elder-supplies-smile.jpg"
               alt="An elderly man smiling outside his home with donated food supplies and essential items provided by AGED-CARE FOUNDATION volunteers."
               width="800"
               height="1000"
               fetchpriority="high"
+              decoding="async"
             >
           </div>
 
@@ -102,17 +230,21 @@
       <div class="container-site">
         <div class="about-grid">
 
-          <div class="about-content">
-            <header class="section-header">
+          <div class="about-content" data-reveal>
+            <header class="section-header" data-reveal>
               <p class="eyebrow">Who We Are</p>
               <h2 id="about-heading" class="section-title">Champions for Zambia's Most Vulnerable Elders</h2>
             </header>
             <p class="prose-body">
-              AGED-CARE FOUNDATION is a registered non-profit and charitable organization established
-              to address the growing challenges faced by vulnerable elderly persons — including poverty,
-              neglect, poor health, social isolation, and abuse. We partner with communities, healthcare
-              institutions, government agencies, and the private sector to deliver sustainable,
-              evidence-based support.
+              AGED-CARE FOUNDATION is a registered non-profit and charitable organization dedicated
+              to promoting the welfare, dignity, health, protection, and social inclusion of older
+              persons in Zambia. The Foundation was established to address the growing challenges
+              faced by vulnerable elderly persons through sustainable and evidence-based interventions.
+            </p>
+            <p class="prose-body mt-4">
+              We work with communities, healthcare institutions, correctional facilities, government
+              agencies, development partners, faith-based organizations, and the private sector to
+              improve the quality of life of older persons across the nation.
             </p>
             <ul class="about-list" aria-label="Challenges we address">
               <li class="about-list-item">Poverty</li>
@@ -120,24 +252,73 @@
               <li class="about-list-item">Poor health</li>
               <li class="about-list-item">Social isolation</li>
               <li class="about-list-item">Abuse</li>
-              <li class="about-list-item">Inadequate support services</li>
+              <li class="about-list-item">Inadequate access to support services</li>
             </ul>
             <blockquote class="about-highlight">
-              We recognize older persons as custodians of knowledge, culture, and community values.
+              Older persons are custodians of knowledge, culture, and community values. We strive
+              to ensure every older person enjoys a life of dignity, respect, security, inclusion,
+              and wellbeing.
             </blockquote>
+            <div class="about-collaborators" aria-label="Our collaborators">
+              <span class="about-tag">Communities</span>
+              <span class="about-tag">Healthcare institutions</span>
+              <span class="about-tag">Correctional facilities</span>
+              <span class="about-tag">Government agencies</span>
+              <span class="about-tag">Development partners</span>
+              <span class="about-tag">Faith-based organizations</span>
+              <span class="about-tag">Private sector</span>
+            </div>
           </div>
 
-          <figure class="about-image">
+          <figure class="about-image" data-reveal data-reveal-delay="1">
             <img
               src="images/community-women-portrait.jpg"
               alt="Two women from a Zambian community seated outside their home, representing the elderly population AGED-CARE FOUNDATION serves."
               width="800"
               height="600"
-              loading="lazy"
+              loading="lazy" decoding="async"
             >
           </figure>
 
         </div>
+
+        <div class="mt-14 md:mt-16">
+          <h3 class="card-title text-center">Who We Serve</h3>
+          <p class="section-desc mx-auto text-center">
+            Our programmes reach vulnerable older persons and those who care for them across Zambia.
+          </p>
+          <ul class="beneficiaries-grid" aria-label="Target beneficiaries">
+            <li class="beneficiary-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              Vulnerable elderly persons in communities
+            </li>
+            <li class="beneficiary-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/></svg>
+              Elderly patients in hospitals
+            </li>
+            <li class="beneficiary-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg>
+              Elderly persons in correctional facilities
+            </li>
+            <li class="beneficiary-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              Elderly persons living alone
+            </li>
+            <li class="beneficiary-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+              Elderly persons with disabilities
+            </li>
+            <li class="beneficiary-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              Elderly-headed households
+            </li>
+            <li class="beneficiary-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Caregivers &amp; family members
+            </li>
+          </ul>
+        </div>
+
       </div>
     </section>
 
@@ -145,18 +326,20 @@
     <section id="mission" class="section section-alt" aria-labelledby="mission-heading">
       <div class="container-site">
 
-        <header class="section-header-center">
+        <header class="section-header-center" data-reveal>
           <p class="eyebrow">Our Purpose</p>
           <h2 id="mission-heading" class="section-title">Mission, Vision &amp; Values</h2>
           <p class="section-desc mx-auto">
-            Guided by compassion and accountability, we work to ensure every older person in Zambia
-            can age with dignity, security, and belonging.
+            AGED-CARE FOUNDATION is committed to advancing the welfare, dignity, health, protection,
+            and social inclusion of vulnerable and neglected older persons across Zambia through
+            compassionate service delivery, advocacy, research, strategic partnerships, and
+            community-driven interventions.
           </p>
         </header>
 
         <!-- Mission & Vision -->
         <div class="mvv-grid">
-          <article class="card">
+          <article class="card" data-reveal>
             <div class="card-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/><path d="M12 5 9 8c-.5.5-.5 1.5 0 2l3 3"/><path d="m15 8-3 3"/></svg>
             </div>
@@ -167,7 +350,7 @@
             </p>
           </article>
 
-          <article class="card">
+          <article class="card" data-reveal>
             <div class="card-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
             </div>
@@ -178,7 +361,7 @@
             </p>
           </article>
 
-          <article class="card">
+          <article class="card" data-reveal>
             <div class="card-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
             </div>
@@ -190,54 +373,56 @@
           </article>
         </div>
 
-        <!-- Values -->
+        <!-- Values (from Strategic Theme &amp; Organizational Statement) -->
+        <h3 class="programs-subsection-title text-center">Our Core Values</h3>
         <div class="values-grid" aria-label="Our values">
-          <article class="value-card">
+
+          <article class="value-card" data-reveal>
             <div class="card-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
             </div>
-            <h3 class="card-title text-xl">Dignity First</h3>
-            <p class="mt-2 text-sm text-neutral-600 md:text-base">Every older person deserves respect, security, and a life lived with honour.</p>
+            <h3 class="card-title text-xl">Dignity</h3>
+            <p class="mt-2 text-sm text-neutral-600 md:text-base">Every older person deserves a life of dignity, respect, and security.</p>
           </article>
 
-          <article class="value-card">
+          <article class="value-card" data-reveal>
             <div class="card-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
             </div>
-            <h3 class="card-title text-xl">Compassionate Care</h3>
-            <p class="mt-2 text-sm text-neutral-600 md:text-base">We deliver practical, human-centered support with empathy and presence.</p>
+            <h3 class="card-title text-xl">Health</h3>
+            <p class="mt-2 text-sm text-neutral-600 md:text-base">Promoting good health, wellbeing, and active ageing for all older persons.</p>
           </article>
 
-          <article class="value-card">
+          <article class="value-card" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3 class="card-title text-xl">Protection</h3>
+            <p class="mt-2 text-sm text-neutral-600 md:text-base">Safeguarding vulnerable elders from neglect, abuse, and social harm.</p>
+          </article>
+
+          <article class="value-card" data-reveal>
             <div class="card-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
             <h3 class="card-title text-xl">Social Inclusion</h3>
-            <p class="mt-2 text-sm text-neutral-600 md:text-base">No elderly person should be isolated, forgotten, or left behind.</p>
+            <p class="mt-2 text-sm text-neutral-600 md:text-base">Ensuring no elderly person is isolated, forgotten, or left behind.</p>
           </article>
 
-          <article class="value-card">
+          <article class="value-card" data-reveal>
             <div class="card-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
             </div>
-            <h3 class="card-title text-xl">Transparency &amp; Accountability</h3>
-            <p class="mt-2 text-sm text-neutral-600 md:text-base">Strong governance, financial stewardship, and measurable impact guide everything we do.</p>
+            <h3 class="card-title text-xl">Compassionate Service</h3>
+            <p class="mt-2 text-sm text-neutral-600 md:text-base">Delivering practical, human-centered care with empathy and presence.</p>
           </article>
 
-          <article class="value-card">
+          <article class="value-card" data-reveal>
             <div class="card-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/></svg>
             </div>
-            <h3 class="card-title text-xl">Community-Driven Action</h3>
-            <p class="mt-2 text-sm text-neutral-600 md:text-base">We work alongside communities, caregivers, and partners to create lasting change.</p>
-          </article>
-
-          <article class="value-card">
-            <div class="card-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
-            </div>
-            <h3 class="card-title text-xl">Evidence-Based Impact</h3>
-            <p class="mt-2 text-sm text-neutral-600 md:text-base">Research, monitoring, and evaluation ensure our programmes deliver real results.</p>
+            <h3 class="card-title text-xl">Accountability</h3>
+            <p class="mt-2 text-sm text-neutral-600 md:text-base">Strong governance, financial stewardship, and evidence-based programming.</p>
           </article>
         </div>
 
@@ -248,47 +433,73 @@
     <section id="impact" class="section" aria-labelledby="impact-heading">
       <div class="container-site">
 
-        <header class="section-header-center">
-          <p class="eyebrow">Our 2030 Goals</p>
+        <header class="section-header-center" data-reveal>
+          <p class="eyebrow">Strategic Targets by 2030</p>
           <h2 id="impact-heading" class="section-title">Building a Future Where No Elder Is Left Behind</h2>
           <p class="section-desc mx-auto">
-            By 2030, we aim to expand our reach across every province of Zambia — delivering
-            measurable, sustainable impact for the nation's most vulnerable older persons.
+            To become Zambia's leading organization promoting the welfare, protection, health, and
+            social inclusion of vulnerable older persons by 2030.
           </p>
         </header>
 
-        <div class="impact-grid">
-          <article class="impact-card">
-            <p class="impact-number" aria-label="20,000 plus">20,000+</p>
-            <p class="impact-label">Vulnerable elders supported</p>
-          </article>
-          <article class="impact-card">
-            <p class="impact-number" aria-label="10">10</p>
-            <p class="impact-label">Provinces across Zambia</p>
-          </article>
-          <article class="impact-card">
-            <p class="impact-number" aria-label="1,000 plus">1,000+</p>
-            <p class="impact-label">Volunteers &amp; caregivers trained</p>
-          </article>
-          <article class="impact-card">
-            <p class="impact-number" aria-label="50 plus">50+</p>
-            <p class="impact-label">Strategic partnerships</p>
-          </article>
-        </div>
+        <div class="impact-layout">
+          <div>
+            <div class="impact-grid">
+              <article class="impact-card" data-reveal>
+                <p class="impact-number">
+                  <span data-counter data-counter-target="20000" data-counter-suffix="+">20,000+</span>
+                </p>
+                <p class="impact-label">Vulnerable older persons supported</p>
+              </article>
+              <article class="impact-card" data-reveal data-reveal-delay="1">
+                <p class="impact-number">
+                  <span data-counter data-counter-target="10">10</span>
+                </p>
+                <p class="impact-label">Provinces with established programmes</p>
+              </article>
+              <article class="impact-card" data-reveal data-reveal-delay="2">
+                <p class="impact-number">
+                  <span data-counter data-counter-target="1000" data-counter-suffix="+">1,000+</span>
+                </p>
+                <p class="impact-label">Volunteers &amp; caregivers trained</p>
+              </article>
+              <article class="impact-card" data-reveal data-reveal-delay="3">
+                <p class="impact-number">
+                  <span data-counter data-counter-target="50" data-counter-suffix="+">50+</span>
+                </p>
+                <p class="impact-label">Strategic partnerships established</p>
+              </article>
+            </div>
 
-        <div class="impact-secondary">
-          <div class="impact-secondary-item">
-            <p class="font-display text-2xl font-bold text-accent-400">K20M+</p>
-            <p class="mt-1 text-sm text-neutral-600">Funding mobilised</p>
+            <div class="impact-secondary">
+              <div class="impact-secondary-item">
+                <p class="font-display text-2xl font-bold text-accent-400">K20M+</p>
+                <p class="mt-1 text-sm text-neutral-600">Funding mobilised</p>
+              </div>
+              <div class="impact-secondary-item">
+                <p class="font-display text-lg font-bold text-neutral-800">Annual Reports</p>
+                <p class="mt-1 text-sm text-neutral-600">Published on the state of older persons in Zambia</p>
+              </div>
+              <div class="impact-secondary-item">
+                <p class="font-display text-lg font-bold text-neutral-800">Policy Reforms</p>
+                <p class="mt-1 text-sm text-neutral-600">Influencing legislative reforms affecting older persons</p>
+              </div>
+              <div class="impact-secondary-item">
+                <p class="font-display text-lg font-bold text-neutral-800">National Resource Centre</p>
+                <p class="mt-1 text-sm text-neutral-600">Elderly Support and Resource Centre to be established</p>
+              </div>
+            </div>
           </div>
-          <div class="impact-secondary-item">
-            <p class="font-display text-lg font-bold text-neutral-800">National Resource Centre</p>
-            <p class="mt-1 text-sm text-neutral-600">Elderly support hub to be established</p>
-          </div>
-          <div class="impact-secondary-item">
-            <p class="font-display text-lg font-bold text-neutral-800">Policy Influence</p>
-            <p class="mt-1 text-sm text-neutral-600">Legislative reforms for older persons</p>
-          </div>
+
+          <figure class="impact-image" data-reveal data-reveal-delay="1">
+            <img
+              src="images/volunteers-meal-donation.jpg"
+              alt="AGED-CARE FOUNDATION volunteers with an elderly woman and a donation of maize meal and essential supplies."
+              width="800"
+              height="600"
+              loading="lazy" decoding="async"
+            >
+          </figure>
         </div>
 
       </div>
@@ -298,173 +509,402 @@
     <section id="programs" class="section section-alt" aria-labelledby="programs-heading">
       <div class="container-site">
 
-        <header class="section-header-center">
-          <p class="eyebrow">What We Do</p>
+        <header class="section-header-center" data-reveal>
+          <p class="eyebrow">Our Strategic Pillars</p>
           <h2 id="programs-heading" class="section-title">Seven Pillars of Compassionate Action</h2>
           <p class="section-desc mx-auto">
-            Our strategic programmes address the full spectrum of needs faced by vulnerable
-            older persons — from daily essentials to advocacy and institutional support.
+            Through evidence-based interventions and community-driven programmes, we address the
+            full spectrum of needs faced by vulnerable older persons across Zambia.
           </p>
         </header>
 
         <!-- Featured programmes (with images) -->
         <div class="programs-featured">
 
-          <article class="program-card">
+          <article class="program-card" data-reveal>
             <div class="program-card-image">
-              <img src="images/elder-woman-hygiene-kit.jpg" alt="An elderly woman receiving food staples and a personal hygiene kit from AGED-CARE FOUNDATION." width="600" height="450" loading="lazy">
+              <img src="images/elder-woman-hygiene-kit.jpg" alt="An elderly woman receiving food staples and a personal hygiene dignity kit." width="600" height="450" loading="lazy" decoding="async">
             </div>
             <div class="program-card-body">
               <h3 class="card-title">Elderly Welfare &amp; Livelihood Support</h3>
-              <p class="mt-3 flex-1 text-sm text-neutral-600 md:text-base">
-                Food, clothing, hygiene kits, emergency relief, and home visitations for vulnerable
-                elders — ensuring daily needs are met with dignity and compassion.
+              <p class="mt-3 text-sm text-neutral-600 md:text-base">
+                Practical assistance to improve the quality of life of vulnerable older persons.
               </p>
-              <a href="#contact" class="btn-ghost mt-5">Learn More</a>
+              <ul class="program-activities">
+                <li>Food and nutritional support</li>
+                <li>Clothing and blanket distribution</li>
+                <li>Personal hygiene and dignity kits</li>
+                <li>Emergency relief support</li>
+                <li>Home visitation programmes</li>
+                <li>Community support networks</li>
+              </ul>
+              <a href="#contact" class="btn-ghost mt-5" data-scroll-link>Learn More</a>
             </div>
           </article>
 
-          <article class="program-card">
+          <article class="program-card" data-reveal>
             <div class="program-card-image">
-              <img src="images/home-visit-volunteers.jpg" alt="AGED-CARE FOUNDATION volunteers visiting an elderly woman in her home with food supplies." width="600" height="450" loading="lazy">
+              <img src="images/home-visit-volunteers.jpg" alt="AGED-CARE FOUNDATION volunteers visiting an elderly woman with food supplies." width="600" height="450" loading="lazy" decoding="async">
             </div>
             <div class="program-card-body">
               <h3 class="card-title">Health &amp; Wellbeing</h3>
-              <p class="mt-3 flex-1 text-sm text-neutral-600 md:text-base">
-                Health screenings, psychosocial support, caregiver training, and active ageing
-                initiatives that promote healthy, dignified lives for older persons.
+              <p class="mt-3 text-sm text-neutral-600 md:text-base">
+                Promoting healthy and active ageing across communities.
               </p>
-              <a href="#contact" class="btn-ghost mt-5">Learn More</a>
+              <ul class="program-activities">
+                <li>Health screening and outreach programmes</li>
+                <li>Mental health and psychosocial support</li>
+                <li>Health education and awareness campaigns</li>
+                <li>Caregiver support and training</li>
+                <li>Medical referrals and follow-up services</li>
+                <li>Wellness and active ageing initiatives</li>
+              </ul>
+              <a href="#contact" class="btn-ghost mt-5" data-scroll-link>Learn More</a>
             </div>
           </article>
 
-          <article class="program-card">
+          <article class="program-card" data-reveal>
             <div class="program-card-image">
-              <img src="images/community-women-portrait.jpg" alt="Community members representing the populations AGED-CARE FOUNDATION advocates for." width="600" height="450" loading="lazy">
+              <img src="images/community-women-portrait.jpg" alt="Community members representing populations AGED-CARE FOUNDATION advocates for." width="600" height="450" loading="lazy" decoding="async">
             </div>
             <div class="program-card-body">
-              <h3 class="card-title">Advocacy, Rights &amp; Inclusion</h3>
-              <p class="mt-3 flex-1 text-sm text-neutral-600 md:text-base">
-                Awareness campaigns, elder abuse prevention, policy advocacy, and age-friendly
-                community building to protect and empower older persons.
+              <h3 class="card-title">Advocacy, Rights &amp; Social Inclusion</h3>
+              <p class="mt-3 text-sm text-neutral-600 md:text-base">
+                Championing the rights of older persons and building age-friendly communities.
               </p>
-              <a href="#contact" class="btn-ghost mt-5">Learn More</a>
+              <ul class="program-activities">
+                <li>Public awareness campaigns</li>
+                <li>Elder abuse prevention programmes</li>
+                <li>Policy advocacy and engagement</li>
+                <li>Community dialogues</li>
+                <li>Intergenerational engagement initiatives</li>
+                <li>Promotion of age-friendly communities</li>
+              </ul>
+              <a href="#contact" class="btn-ghost mt-5" data-scroll-link>Learn More</a>
             </div>
           </article>
 
-          <article class="program-card">
+          <article class="program-card" data-reveal>
             <div class="program-card-image">
-              <img src="images/community-group-donation.jpg" alt="A community group receiving donated food supplies through AGED-CARE FOUNDATION outreach." width="600" height="450" loading="lazy">
+              <img src="images/community-group-donation.jpg" alt="A community group receiving support through AGED-CARE FOUNDATION outreach." width="600" height="450" loading="lazy" decoding="async">
             </div>
             <div class="program-card-body">
-              <h3 class="card-title">Institutional Support</h3>
-              <p class="mt-3 flex-1 text-sm text-neutral-600 md:text-base">
-                Hospital visitation and correctional facility support for elderly patients and
-                inmates — a unique focus area providing comfort, care, and reintegration.
+              <h3 class="card-title">Hospital &amp; Correctional Facility Support</h3>
+              <p class="mt-3 text-sm text-neutral-600 md:text-base">
+                A unique area of our work — supporting elderly persons in institutions.
               </p>
-              <a href="#contact" class="btn-ghost mt-5">Learn More</a>
+              <ul class="program-activities">
+                <li>Hospital patient visitation &amp; comfort packs</li>
+                <li>Food, nutritional &amp; hygiene support in hospitals</li>
+                <li>Psychosocial counselling &amp; family reunification</li>
+                <li>Welfare support for elderly inmates</li>
+                <li>Counselling, spiritual support &amp; reintegration</li>
+              </ul>
+              <a href="#contact" class="btn-ghost mt-5" data-scroll-link>Learn More</a>
             </div>
           </article>
 
         </div>
 
-        <!-- Compact programmes (no images) -->
-        <div class="programs-compact">
+        <!-- Supporting pillars -->
+        <div class="programs-subsection">
+          <h3 class="programs-subsection-title text-center">Strengthening Our Impact</h3>
+          <div class="programs-compact">
 
-          <article class="program-card-compact">
+          <article class="program-card-compact" data-reveal>
             <div class="card-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg>
             </div>
-            <h3 class="card-title text-xl">Research &amp; Knowledge</h3>
+            <h3 class="card-title text-xl">Research, Innovation &amp; Knowledge</h3>
             <p class="mt-3 flex-1 text-sm text-neutral-600">
-              Evidence-based programming through research, policy analysis, needs assessments,
-              and published reports on ageing in Zambia.
+              Evidence-based programming through research on ageing, policy analysis, needs
+              assessments, monitoring and evaluation, and publication of reports and policy briefs.
             </p>
-            <a href="#contact" class="btn-ghost mt-4">Learn More</a>
+            <a href="#contact" class="btn-ghost mt-4" data-scroll-link>Learn More</a>
           </article>
 
-          <article class="program-card-compact">
+          <article class="program-card-compact" data-reveal>
             <div class="card-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/></svg>
             </div>
-            <h3 class="card-title text-xl">Partnerships &amp; Mobilisation</h3>
+            <h3 class="card-title text-xl">Resource Mobilisation &amp; Partnerships</h3>
             <p class="mt-3 flex-1 text-sm text-neutral-600">
-              Grants, corporate partnerships, individual giving, and international collaboration
-              to sustain and scale our impact across Zambia.
+              Strengthening sustainability through grant acquisition, corporate partnerships,
+              individual giving, community fundraising, and international collaboration.
             </p>
-            <a href="#contact" class="btn-ghost mt-4">Learn More</a>
+            <a href="#contact" class="btn-ghost mt-4" data-scroll-link>Learn More</a>
           </article>
 
-          <article class="program-card-compact">
+          <article class="program-card-compact" data-reveal>
             <div class="card-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-2"/><path d="M6 10V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5"/></svg>
             </div>
-            <h3 class="card-title text-xl">Governance &amp; Strength</h3>
+            <h3 class="card-title text-xl">Governance &amp; Institutional Development</h3>
             <p class="mt-3 flex-1 text-sm text-neutral-600">
-              Accountable governance, volunteer development, staff capacity building, and
-              organizational excellence for long-term sustainability.
+              Committed to strong governance systems, financial accountability, volunteer
+              development, staff capacity building, monitoring and evaluation, and digital transformation.
             </p>
-            <a href="#contact" class="btn-ghost mt-4">Learn More</a>
+            <a href="#contact" class="btn-ghost mt-4" data-scroll-link>Learn More</a>
           </article>
 
+          </div>
         </div>
 
       </div>
     </section>
 
     <!-- ═══════════════════ GALLERY ═══════════════════ -->
-    <section id="gallery" class="section" aria-labelledby="gallery-heading">
+    <section id="gallery" class="gallery-section section" aria-labelledby="gallery-heading">
       <div class="container-site">
 
-        <header class="section-header-center">
+        <header class="gallery-intro" data-reveal>
           <p class="eyebrow">In the Field</p>
           <h2 id="gallery-heading" class="section-title">See Our Work in Action</h2>
-          <p class="section-desc mx-auto">
-            Real moments from our outreach programmes — connecting with communities and
-            delivering tangible support to those who need it most.
+          <p class="gallery-intro-desc">
+            Real moments from our community-driven interventions — food and nutritional support,
+            home visitations, dignity kits, and compassionate outreach across Zambia.
           </p>
         </header>
 
-        <div class="gallery-grid">
+        <div class="gallery-story" role="list" aria-label="Field activities photo story">
 
-          <figure class="gallery-item group">
-            <img src="images/elder-supplies-smile.jpg" alt="An elderly man smiling with donated food supplies." width="400" height="400" loading="lazy">
-            <div class="gallery-overlay"><span>Food &amp; essentials distribution</span></div>
+          <figure
+            class="gallery-story-item gallery-story-item--hero"
+            role="listitem"
+            data-reveal
+            tabindex="0"
+          >
+            <div class="gallery-story-frame">
+              <img
+                src="images/elder-supplies-smile.jpg"
+                alt="An elderly man smiling with donated food supplies and essential items from AGED-CARE FOUNDATION volunteers."
+                class="gallery-story-image"
+                width="900"
+                height="1100"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="gallery-story-shade" aria-hidden="true"></div>
+              <figcaption class="gallery-story-caption">
+                <span class="gallery-story-tag">Welfare &amp; Livelihood</span>
+                <span class="gallery-story-heading">Food &amp; Nutritional Support</span>
+                <p class="gallery-story-text">Essential food staples and supplies reaching vulnerable elders in their own communities.</p>
+                <span class="gallery-story-meta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Chibombo District, Zambia
+                </span>
+              </figcaption>
+            </div>
           </figure>
 
-          <figure class="gallery-item group">
-            <img src="images/volunteer-embrace-elder.jpg" alt="A volunteer embracing an elderly man during a home visit." width="400" height="400" loading="lazy">
-            <div class="gallery-overlay"><span>Compassionate home visits</span></div>
+          <figure
+            class="gallery-story-item gallery-story-item--portrait"
+            role="listitem"
+            data-reveal
+            data-reveal-delay="1"
+            tabindex="0"
+          >
+            <div class="gallery-story-frame">
+              <img
+                src="images/volunteer-embrace-elder.jpg"
+                alt="A volunteer embracing an elderly man during a compassionate home visitation."
+                class="gallery-story-image"
+                width="600"
+                height="800"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="gallery-story-shade" aria-hidden="true"></div>
+              <figcaption class="gallery-story-caption">
+                <span class="gallery-story-tag">Elderly Care</span>
+                <span class="gallery-story-heading">Home Visitation Programmes</span>
+                <p class="gallery-story-text">Volunteers offer companionship, dignity, and hands-on care during regular home visits.</p>
+                <span class="gallery-story-meta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Lusaka Province
+                </span>
+              </figcaption>
+            </div>
           </figure>
 
-          <figure class="gallery-item group">
-            <img src="images/elder-woman-hygiene-kit.jpg" alt="An elderly woman receiving hygiene and food supplies." width="400" height="400" loading="lazy">
-            <div class="gallery-overlay"><span>Dignity kits delivery</span></div>
+          <figure
+            class="gallery-story-item gallery-story-item--hygiene"
+            role="listitem"
+            data-reveal
+            data-reveal-delay="2"
+            tabindex="0"
+          >
+            <div class="gallery-story-frame">
+              <img
+                src="images/elder-woman-hygiene-kit.jpg"
+                alt="An elderly woman receiving a personal hygiene and dignity kit."
+                class="gallery-story-image"
+                width="600"
+                height="500"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="gallery-story-shade" aria-hidden="true"></div>
+              <figcaption class="gallery-story-caption">
+                <span class="gallery-story-tag">Health &amp; Wellbeing</span>
+                <span class="gallery-story-heading">Personal Hygiene &amp; Dignity Kits</span>
+                <p class="gallery-story-text">Restoring dignity through hygiene essentials and personal care support.</p>
+                <span class="gallery-story-meta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Community outreach
+                </span>
+              </figcaption>
+            </div>
           </figure>
 
-          <figure class="gallery-item group">
-            <img src="images/elder-woman-food-distribution.jpg" alt="An elderly woman smiling during food distribution outreach." width="400" height="400" loading="lazy">
-            <div class="gallery-overlay"><span>Community food outreach</span></div>
+          <figure
+            class="gallery-story-item gallery-story-item--delivery"
+            role="listitem"
+            data-reveal
+            data-reveal-delay="1"
+            tabindex="0"
+          >
+            <div class="gallery-story-frame">
+              <img
+                src="images/volunteers-meal-donation.jpg"
+                alt="Volunteers delivering maize meal and cooking supplies to an elderly woman."
+                class="gallery-story-image"
+                width="600"
+                height="800"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="gallery-story-shade" aria-hidden="true"></div>
+              <figcaption class="gallery-story-caption">
+                <span class="gallery-story-tag">Welfare &amp; Livelihood</span>
+                <span class="gallery-story-heading">Volunteer Supply Delivery</span>
+                <p class="gallery-story-text">Maize meal and cooking essentials brought directly to elders' doorsteps.</p>
+                <span class="gallery-story-meta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Rural communities
+                </span>
+              </figcaption>
+            </div>
           </figure>
 
-          <figure class="gallery-item group">
-            <img src="images/home-visit-volunteers.jpg" alt="Volunteers visiting an elderly woman in her home." width="400" height="400" loading="lazy">
-            <div class="gallery-overlay"><span>Home visitation programme</span></div>
+          <figure
+            class="gallery-story-item gallery-story-item--homevisit"
+            role="listitem"
+            data-reveal
+            data-reveal-delay="2"
+            tabindex="0"
+          >
+            <div class="gallery-story-frame">
+              <img
+                src="images/home-visit-volunteers.jpg"
+                alt="AGED-CARE FOUNDATION volunteers visiting an elderly woman with food supplies."
+                class="gallery-story-image"
+                width="700"
+                height="550"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="gallery-story-shade" aria-hidden="true"></div>
+              <figcaption class="gallery-story-caption">
+                <span class="gallery-story-tag">Community Support</span>
+                <span class="gallery-story-heading">Community Support Networks</span>
+                <p class="gallery-story-text">Building lasting trust through consistent, compassionate presence.</p>
+                <span class="gallery-story-meta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Chibombo District
+                </span>
+              </figcaption>
+            </div>
           </figure>
 
-          <figure class="gallery-item group">
-            <img src="images/volunteers-meal-donation.jpg" alt="Volunteers with an elderly woman and maize meal donation." width="400" height="400" loading="lazy">
-            <div class="gallery-overlay"><span>Meal donation delivery</span></div>
+          <figure
+            class="gallery-story-item gallery-story-item--emergency"
+            role="listitem"
+            data-reveal
+            data-reveal-delay="3"
+            tabindex="0"
+          >
+            <div class="gallery-story-frame">
+              <img
+                src="images/elder-woman-food-distribution.jpg"
+                alt="An elderly woman during a community food distribution outreach."
+                class="gallery-story-image"
+                width="600"
+                height="800"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="gallery-story-shade" aria-hidden="true"></div>
+              <figcaption class="gallery-story-caption">
+                <span class="gallery-story-tag">Emergency Response</span>
+                <span class="gallery-story-heading">Emergency Relief Support</span>
+                <p class="gallery-story-text">Rapid food distribution for elders facing crisis and food insecurity.</p>
+                <span class="gallery-story-meta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Zambia
+                </span>
+              </figcaption>
+            </div>
           </figure>
 
-          <figure class="gallery-item group">
-            <img src="images/community-women-portrait.jpg" alt="Community women representing those we serve." width="400" height="400" loading="lazy">
-            <div class="gallery-overlay"><span>Community engagement</span></div>
+          <figure
+            class="gallery-story-item gallery-story-item--intergen"
+            role="listitem"
+            data-reveal
+            data-reveal-delay="2"
+            tabindex="0"
+          >
+            <div class="gallery-story-frame">
+              <img
+                src="images/community-group-donation.jpg"
+                alt="A multi-generational community group with donated supplies from AGED-CARE FOUNDATION."
+                class="gallery-story-image"
+                width="900"
+                height="550"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="gallery-story-shade" aria-hidden="true"></div>
+              <figcaption class="gallery-story-caption">
+                <span class="gallery-story-tag">Advocacy &amp; Inclusion</span>
+                <span class="gallery-story-heading">Intergenerational Outreach</span>
+                <p class="gallery-story-text">Uniting generations through shared support, solidarity, and community care.</p>
+                <span class="gallery-story-meta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Zambia
+                </span>
+              </figcaption>
+            </div>
           </figure>
 
-          <figure class="gallery-item group">
-            <img src="images/community-group-donation.jpg" alt="A multi-generational group with donated food supplies." width="400" height="400" loading="lazy">
-            <div class="gallery-overlay"><span>Family &amp; community support</span></div>
+          <figure
+            class="gallery-story-item gallery-story-item--engagement"
+            role="listitem"
+            data-reveal
+            data-reveal-delay="3"
+            tabindex="0"
+          >
+            <div class="gallery-story-frame">
+              <img
+                src="images/community-women-portrait.jpg"
+                alt="Community members representing the populations AGED-CARE FOUNDATION serves across Zambia."
+                class="gallery-story-image"
+                width="700"
+                height="550"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="gallery-story-shade" aria-hidden="true"></div>
+              <figcaption class="gallery-story-caption">
+                <span class="gallery-story-tag">Social Inclusion</span>
+                <span class="gallery-story-heading">Community Engagement</span>
+                <p class="gallery-story-text">The faces of the communities we serve, advocate for, and stand beside.</p>
+                <span class="gallery-story-meta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Across Zambia
+                </span>
+              </figcaption>
+            </div>
           </figure>
 
         </div>
@@ -476,54 +916,67 @@
     <section id="testimonials" class="section section-tint" aria-labelledby="testimonials-heading">
       <div class="container-site">
 
-        <header class="section-header-center">
-          <p class="eyebrow">Voices from the Community</p>
-          <h2 id="testimonials-heading" class="section-title">Stories of Hope &amp; Dignity</h2>
+        <header class="section-header-center" data-reveal>
+          <p class="eyebrow">Our Commitment</p>
+          <h2 id="testimonials-heading" class="section-title">Restoring Dignity, Enhancing Wellbeing, Transforming Lives</h2>
           <p class="section-desc mx-auto">
-            The people we serve are at the heart of everything we do. Their stories inspire
-            our mission and remind us why this work matters.
+            These principles guide every programme, partnership, and intervention we undertake
+            on behalf of Zambia's most vulnerable older persons.
           </p>
         </header>
 
-        <!-- Static cards for Phase 1 — slider in Phase 3 -->
-        <div class="testimonials-grid">
+        <div class="testimonial-slider" data-slider role="region" aria-label="Organizational commitments" aria-roledescription="carousel">
+          <p class="sr-only" data-slider-status aria-live="polite" aria-atomic="true"></p>
 
-          <article class="testimonial-card">
-            <span class="placeholder-badge">Temporary placeholder</span>
-            <blockquote class="testimonial-quote">
-              "The support I received changed my life. I no longer worry about where my next
-              meal will come from. AGED-CARE FOUNDATION brought hope back into my home."
-            </blockquote>
-            <footer class="testimonial-author">
-              <p class="testimonial-name">Community Elder</p>
-              <p class="testimonial-role">Programme Beneficiary — Lusaka Province</p>
-            </footer>
-          </article>
+          <div class="slider-track" data-slider-track>
+            <article class="testimonial-card" data-slider-slide id="commitment-slide-1" role="group" aria-roledescription="slide" aria-label="1 of 3">
+              <p class="testimonial-source">Organizational Philosophy</p>
+              <blockquote class="testimonial-quote">
+                "Older persons are custodians of knowledge, culture, and community values. We strive
+                to ensure every older person enjoys a life of dignity, respect, security, inclusion,
+                and wellbeing."
+              </blockquote>
+              <footer class="testimonial-author">
+                <p class="testimonial-name">AGED-CARE FOUNDATION</p>
+                <p class="testimonial-role">Corporate Profile</p>
+              </footer>
+            </article>
 
-          <article class="testimonial-card">
-            <span class="placeholder-badge">Temporary placeholder</span>
-            <blockquote class="testimonial-quote">
-              "Volunteering with AGED-CARE FOUNDATION has been the most meaningful experience
-              of my life. Seeing the smiles on the faces of elders we visit keeps me going."
-            </blockquote>
-            <footer class="testimonial-author">
-              <p class="testimonial-name">Foundation Volunteer</p>
-              <p class="testimonial-role">Home Visitation Programme</p>
-            </footer>
-          </article>
+            <article class="testimonial-card" data-slider-slide id="commitment-slide-2" role="group" aria-roledescription="slide" aria-label="2 of 3">
+              <p class="testimonial-source">Organizational Statement</p>
+              <blockquote class="testimonial-quote">
+                "We are dedicated to influencing policy, strengthening social protection systems,
+                and ensuring that no elderly person is left behind."
+              </blockquote>
+              <footer class="testimonial-author">
+                <p class="testimonial-name">AGED-CARE FOUNDATION</p>
+                <p class="testimonial-role">Strategic Plan 2026–2030</p>
+              </footer>
+            </article>
 
-          <article class="testimonial-card">
-            <span class="placeholder-badge">Temporary placeholder</span>
-            <blockquote class="testimonial-quote">
-              "Partnering with AGED-CARE FOUNDATION has allowed us to make a real difference
-              in the lives of Zambia's most vulnerable citizens. Their transparency and impact
-              are truly commendable."
-            </blockquote>
-            <footer class="testimonial-author">
-              <p class="testimonial-name">Community Partner</p>
-              <p class="testimonial-role">Development Partner — Zambia</p>
-            </footer>
-          </article>
+            <article class="testimonial-card" data-slider-slide id="commitment-slide-3" role="group" aria-roledescription="slide" aria-label="3 of 3">
+              <p class="testimonial-source">Partnership Commitment</p>
+              <blockquote class="testimonial-quote">
+                "Through transparent governance, evidence-based programming, strong community
+                engagement, and measurable impact, we provide a credible platform for advancing
+                social responsibility, sustainable development, and human dignity."
+              </blockquote>
+              <footer class="testimonial-author">
+                <p class="testimonial-name">AGED-CARE FOUNDATION</p>
+                <p class="testimonial-role">Why Partner With Us</p>
+              </footer>
+            </article>
+          </div>
+
+          <div class="slider-controls">
+            <button type="button" class="slider-btn" data-slider-prev aria-label="Previous commitment">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <div class="slider-dots" data-slider-dots role="tablist" aria-label="Select commitment"></div>
+            <button type="button" class="slider-btn" data-slider-next aria-label="Next commitment">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
 
         </div>
 
@@ -534,28 +987,78 @@
     <section id="partners" class="section" aria-labelledby="partners-heading">
       <div class="container-site">
 
-        <header class="section-header-center">
-          <p class="eyebrow">Our Partners</p>
+        <header class="section-header-center" data-reveal>
+          <p class="eyebrow">Strategic Partnerships</p>
           <h2 id="partners-heading" class="section-title">Stronger Together for Lasting Impact</h2>
           <p class="section-desc mx-auto">
-            AGED-CARE FOUNDATION offers partners an opportunity to contribute directly to improving
-            the lives of some of Zambia's most vulnerable citizens. Through transparent governance,
-            evidence-based programming, and measurable impact, we provide a credible platform for
-            advancing social responsibility and human dignity.
+            AGED-CARE FOUNDATION works with a diverse network of collaborators to deliver
+            sustainable, evidence-based support for older persons across Zambia.
           </p>
         </header>
 
-        <div class="partners-grid" aria-label="Partner logos">
-          <div class="partner-slot">Partner logo<br>coming soon</div>
-          <div class="partner-slot">Partner logo<br>coming soon</div>
-          <div class="partner-slot">Partner logo<br>coming soon</div>
-          <div class="partner-slot">Partner logo<br>coming soon</div>
-          <div class="partner-slot">Partner logo<br>coming soon</div>
-          <div class="partner-slot">Partner logo<br>coming soon</div>
+        <div class="partners-types" aria-label="Partner categories">
+
+          <article class="partner-type-card" data-reveal>
+            <div class="partner-type-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-2"/><path d="M6 10V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5"/></svg>
+            </div>
+            <h3 class="card-title text-lg">Government Agencies</h3>
+            <p class="mt-2 text-sm text-neutral-600">Policy engagement and social protection systems</p>
+          </article>
+
+          <article class="partner-type-card" data-reveal>
+            <div class="partner-type-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </div>
+            <h3 class="card-title text-lg">Development Partners</h3>
+            <p class="mt-2 text-sm text-neutral-600">International collaboration and grant partnerships</p>
+          </article>
+
+          <article class="partner-type-card" data-reveal>
+            <div class="partner-type-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/></svg>
+            </div>
+            <h3 class="card-title text-lg">Healthcare Institutions</h3>
+            <p class="mt-2 text-sm text-neutral-600">Hospital support and health outreach programmes</p>
+          </article>
+
+          <article class="partner-type-card" data-reveal>
+            <div class="partner-type-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </div>
+            <h3 class="card-title text-lg">Faith-Based Organizations</h3>
+            <p class="mt-2 text-sm text-neutral-600">Community outreach and spiritual support</p>
+          </article>
+
+          <article class="partner-type-card" data-reveal>
+            <div class="partner-type-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M6 20h12"/><path d="M6 16h12"/><path d="M6 12h.01"/><rect width="20" height="12" x="2" y="6" rx="2"/></svg>
+            </div>
+            <h3 class="card-title text-lg">Private Sector</h3>
+            <p class="mt-2 text-sm text-neutral-600">Corporate partnerships and social responsibility</p>
+          </article>
+
+          <article class="partner-type-card" data-reveal>
+            <div class="partner-type-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="card-title text-lg">Communities &amp; Volunteers</h3>
+            <p class="mt-2 text-sm text-neutral-600">Community fundraising and volunteer mobilisation</p>
+          </article>
+
         </div>
 
-        <div class="mt-10 text-center">
-          <a href="#contact" class="btn-primary">Become a Partner</a>
+        <div class="partners-commitment" data-reveal>
+          <p class="prose-body text-center">
+            AGED-CARE FOUNDATION offers partners an opportunity to contribute directly to improving
+            the lives of some of Zambia's most vulnerable citizens. Through transparent governance,
+            evidence-based programming, strong community engagement, and measurable impact, the
+            Foundation provides a credible platform for advancing social responsibility,
+            sustainable development, and human dignity.
+          </p>
+          <div class="mt-8 text-center">
+            <a href="#contact" class="btn-primary" data-scroll-link>Become a Partner</a>
+          </div>
         </div>
 
       </div>
@@ -564,20 +1067,20 @@
     <!-- ═══════════════════ SUPPORT ═══════════════════ -->
     <section id="support" class="support-section section" aria-labelledby="support-heading">
       <div class="support-bg" aria-hidden="true">
-        <img src="images/volunteer-embrace-elder.jpg" alt="" width="1920" height="1080" loading="lazy">
+        <img src="images/volunteer-embrace-elder.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async">
       </div>
       <div class="support-overlay" aria-hidden="true"></div>
 
       <div class="container-site support-content">
-        <h2 id="support-heading" class="support-title">Help Us Reach More Vulnerable Elders</h2>
-        <p class="support-desc">
+        <h2 id="support-heading" class="support-title" data-reveal>Help Us Reach More Vulnerable Elders</h2>
+        <p class="support-desc" data-reveal data-reveal-delay="1">
           Your support provides food, dignity kits, health outreach, and companionship to older
           persons who need it most. Together, we can ensure no one ages in isolation or poverty.
         </p>
 
         <div class="support-actions">
 
-          <article class="support-action-card">
+          <article class="support-action-card" data-reveal>
             <div class="action-card-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
             </div>
@@ -585,10 +1088,10 @@
             <p class="mt-2 text-sm text-neutral-300">
               Help us provide food, hygiene kits, and essential supplies to elders in need.
             </p>
-            <a href="#contact" class="btn-warm mt-5">Help Us Reach More Elders</a>
+            <a href="#contact" class="btn-warm mt-5" data-scroll-link>Help Us Reach More Elders</a>
           </article>
 
-          <article class="support-action-card">
+          <article class="support-action-card" data-reveal>
             <div class="action-card-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
@@ -596,10 +1099,10 @@
             <p class="mt-2 text-sm text-neutral-300">
               Join our home visitation teams and bring companionship to isolated elders.
             </p>
-            <a href="#contact" class="btn-outline-light mt-5">Become a Volunteer</a>
+            <a href="#contact" class="btn-outline-light mt-5" data-scroll-link>Become a Volunteer</a>
           </article>
 
-          <article class="support-action-card">
+          <article class="support-action-card" data-reveal>
             <div class="action-card-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/></svg>
             </div>
@@ -607,7 +1110,7 @@
             <p class="mt-2 text-sm text-neutral-300">
               Collaborate with us to scale impact across all ten provinces of Zambia.
             </p>
-            <a href="#contact" class="btn-outline-light mt-5">Partner With Us</a>
+            <a href="#contact" class="btn-outline-light mt-5" data-scroll-link>Partner With Us</a>
           </article>
 
         </div>
@@ -618,30 +1121,34 @@
     <section id="contact" class="section" aria-labelledby="contact-heading">
       <div class="container-site">
 
-        <header class="section-header-center">
-          <p class="eyebrow">Get in Touch</p>
-          <h2 id="contact-heading" class="section-title">We'd Love to Hear From You</h2>
+        <header class="section-header-center" data-reveal>
+          <p class="eyebrow">Contact Information</p>
+          <h2 id="contact-heading" class="section-title">Connect With AGED-CARE FOUNDATION</h2>
           <p class="section-desc mx-auto">
-            Whether you want to volunteer, partner, donate, or simply learn more — our team
-            is ready to connect with you.
+            Reach out to learn more about our programmes, explore partnership opportunities,
+            volunteer with us, or support our mission for older persons in Zambia.
           </p>
         </header>
 
         <div class="contact-grid">
 
-          <!-- Contact Form (validation in Phase 3) -->
-          <form class="contact-form" action="#" method="post" novalidate>
+          <div class="contact-form-wrap">
+            <h3 class="card-title text-xl mb-6">Send Us a Message</h3>
+            <form class="contact-form" data-form action="#" method="post" novalidate>
+            <div class="form-status" data-form-status role="status" aria-live="polite" tabindex="-1"></div>
             <div class="form-group">
               <label for="contact-name" class="form-label">Full Name</label>
-              <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your full name" required autocomplete="name">
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your full name" required autocomplete="name" aria-required="true" aria-describedby="error-contact-name">
+              <p class="form-error" id="error-contact-name" data-error-for="contact-name" role="alert"></p>
             </div>
             <div class="form-group">
               <label for="contact-email" class="form-label">Email Address</label>
-              <input type="email" id="contact-email" name="email" class="form-input" placeholder="you@example.com" required autocomplete="email">
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="you@example.com" required autocomplete="email" aria-required="true" aria-describedby="error-contact-email">
+              <p class="form-error" id="error-contact-email" data-error-for="contact-email" role="alert"></p>
             </div>
             <div class="form-group">
               <label for="contact-subject" class="form-label">Subject</label>
-              <select id="contact-subject" name="subject" class="form-select" required>
+              <select id="contact-subject" name="subject" class="form-select" required aria-required="true" aria-describedby="error-contact-subject">
                 <option value="" disabled selected>Select a subject</option>
                 <option value="general">General Inquiry</option>
                 <option value="volunteer">Volunteer</option>
@@ -649,16 +1156,20 @@
                 <option value="donation">Donation</option>
                 <option value="media">Media</option>
               </select>
+              <p class="form-error" id="error-contact-subject" data-error-for="contact-subject" role="alert"></p>
             </div>
             <div class="form-group">
               <label for="contact-message" class="form-label">Message</label>
-              <textarea id="contact-message" name="message" class="form-textarea" placeholder="How can we help you?" required rows="5"></textarea>
+              <textarea id="contact-message" name="message" class="form-textarea" placeholder="How can we help you?" required rows="5" aria-required="true" aria-describedby="error-contact-message"></textarea>
+              <p class="form-error" id="error-contact-message" data-error-for="contact-message" role="alert"></p>
             </div>
             <button type="submit" class="btn-primary w-full sm:w-auto">Send Message</button>
-          </form>
+            </form>
+          </div>
 
           <!-- Contact Info -->
           <div class="contact-info">
+            <h3 class="card-title text-xl mb-6">AGED-CARE FOUNDATION</h3>
             <ul class="contact-info-list">
 
               <li class="contact-info-item">
@@ -709,8 +1220,14 @@
 
             </ul>
 
-            <div class="map-placeholder" role="img" aria-label="Map placeholder — Chibombo District, Lusaka Province, Zambia">
-              Map embed coming soon
+            <p class="contact-hours">
+              Registered non-profit and charitable organization serving vulnerable older persons
+              across Zambia. Governed by a Board of Directors with dedicated committees for
+              governance, finance, programmes, research, and fundraising.
+            </p>
+
+            <div class="map-placeholder" role="img" aria-label="AGED-CARE FOUNDATION — 2427, 10 Miles, Mungule Road, Chibombo District, Lusaka Province, Zambia">
+              Chibombo District, Lusaka Province, Zambia
             </div>
           </div>
 
@@ -728,30 +1245,35 @@
 
         <div>
           <p class="font-display text-lg font-bold text-white">AGED-CARE FOUNDATION</p>
+          <p class="footer-tagline">Restoring Dignity, Enhancing Wellbeing, Transforming Lives.</p>
           <p class="mt-3 text-sm leading-relaxed text-neutral-400">
-            Restoring Dignity, Enhancing Wellbeing, Transforming Lives. A registered Zambian
-            non-profit dedicated to the welfare and social inclusion of vulnerable older persons.
+            A registered non-profit and charitable organization dedicated to promoting the welfare,
+            dignity, health, protection, and social inclusion of older persons in Zambia.
           </p>
         </div>
 
         <div>
           <h3 class="footer-title">Quick Links</h3>
           <ul class="space-y-2">
-            <li><a href="#about" class="footer-link">About Us</a></li>
-            <li><a href="#impact" class="footer-link">Our Impact</a></li>
-            <li><a href="#programs" class="footer-link">Programmes</a></li>
-            <li><a href="#gallery" class="footer-link">Gallery</a></li>
-            <li><a href="#contact" class="footer-link">Contact</a></li>
+            <li><a href="#about" class="footer-link" data-scroll-link>About Us</a></li>
+            <li><a href="#mission" class="footer-link" data-scroll-link>Mission &amp; Vision</a></li>
+            <li><a href="#impact" class="footer-link" data-scroll-link>Our Impact</a></li>
+            <li><a href="#programs" class="footer-link" data-scroll-link>Programmes</a></li>
+            <li><a href="#gallery" class="footer-link" data-scroll-link>Gallery</a></li>
+            <li><a href="#partners" class="footer-link" data-scroll-link>Partners</a></li>
+            <li><a href="#support" class="footer-link" data-scroll-link>Support Us</a></li>
+            <li><a href="#contact" class="footer-link" data-scroll-link>Contact</a></li>
           </ul>
         </div>
 
         <div>
           <h3 class="footer-title">Programmes</h3>
           <ul class="space-y-2">
-            <li><a href="#programs" class="footer-link">Elderly Welfare</a></li>
-            <li><a href="#programs" class="footer-link">Health &amp; Wellbeing</a></li>
-            <li><a href="#programs" class="footer-link">Advocacy &amp; Rights</a></li>
-            <li><a href="#programs" class="footer-link">Institutional Support</a></li>
+            <li><a href="#programs" class="footer-link" data-scroll-link>Elderly Welfare &amp; Livelihood</a></li>
+            <li><a href="#programs" class="footer-link" data-scroll-link>Health &amp; Wellbeing</a></li>
+            <li><a href="#programs" class="footer-link" data-scroll-link>Advocacy &amp; Social Inclusion</a></li>
+            <li><a href="#programs" class="footer-link" data-scroll-link>Hospital &amp; Correctional Support</a></li>
+            <li><a href="#programs" class="footer-link" data-scroll-link>Research &amp; Knowledge</a></li>
           </ul>
         </div>
 
@@ -775,10 +1297,12 @@
 
       <div class="footer-bottom">
         <p>&copy; 2026 AGED-CARE FOUNDATION. All rights reserved.</p>
+        <p class="mt-2 text-xs text-neutral-600">Promoting Dignity, Health, Protection and Social Inclusion for Older Persons in Zambia</p>
       </div>
 
     </div>
   </footer>
 
+  <script type="module" src="src/js/main.js"></script>
 </body>
 </html>
